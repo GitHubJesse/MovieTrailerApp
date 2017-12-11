@@ -30,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         /** SEEDING DATABASE */
 
-        trailerDB.addTrailer(new Trailer(1));
-        trailerDB.addTrailer(new Trailer(2));
-        trailerDB.addTrailer(new Trailer(3));
-        trailerDB.addTrailer(new Trailer(4));
-        trailerDB.addTrailer(new Trailer(5));
+        int DEFAULT_RATING = 0;
+        trailerDB.addTrailer(new Trailer(1,"Jurassic World: Fallen Kingdom","Four years after the destruction of the Jurassic World theme park, Owen Grady and Claire Dearing return to the island of Isla Nublar to save the remaining dinosaurs from a volcano that's about to erupt. They soon encounter terrifying new breeds of gigantic dinos while uncovering a conspiracy that threatens the entire planet.", "vn9mMeWcgoM",DEFAULT_RATING));
+        trailerDB.addTrailer(new Trailer(2,"Star Wars: The Last Jedi","Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.","Q0CbN8sfihY",DEFAULT_RATING));
+        trailerDB.addTrailer(new Trailer(3,"Deadpool 2 'Wet on Wet'","Wisecracking mercenary Deadpool battles ninjas, the yakuza and a pack of aggressive canines as he embarks on a new adventure.","8-Cjsnq8kVU",DEFAULT_RATING));
+        trailerDB.addTrailer(new Trailer(4,"People You May Know","Four middle-aged friends living in Los Angeles confront a new reality.","eJ4n2PKpppE",DEFAULT_RATING));
+        trailerDB.addTrailer(new Trailer(5,"Rampage","Primatologist Davis Okoye shares an unshakable bond with George, an extraordinarily intelligent, silverback gorilla that's been in his care since birth. When a rogue genetic experiment goes wrong, it causes George, a wolf and a reptile to grow to a monstrous size. As the mutated beasts embark on a path of destruction, Okoye teams up with a discredited genetic engineer and the military to secure an antidote and prevent a global catastrophe.","coOKvrsmQiI",DEFAULT_RATING));
 
         /** DONE SEEDING */
 
