@@ -1,5 +1,6 @@
 package com.example.itguest.movietrailerapp;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -14,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public final String COL_1 = "id";
     public final String COL_2 = "title";
     public final String COL_3 = "description";
-    public final String COL_4 = "image_path";
+    public final String COL_4 = "video_url";
     public final String COL_5 = "rating";
 
 
@@ -38,4 +39,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
+
+//    public void addMovie(Trailer trailer)
+//    {
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(COL_2);
+//        contentValues.put(COL_3);
+//        contentValues.put(COL_4);
+//        contentValues.put(COL_5);
+//    }
 }
