@@ -12,11 +12,11 @@ public class Trailer implements Serializable
     private String title;
     private String description;
     private String video_url;
-    private String rating;
+    private int rating;
 
     public Trailer(){}
 
-    public Trailer(int id, String title, String description, String video_url, String rating)
+    public Trailer(int id, String title, String description, String video_url, int rating)
     {
         this.id = id;
         this.title = title;
@@ -57,11 +57,11 @@ public class Trailer implements Serializable
         this.video_url = video_url;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 }
