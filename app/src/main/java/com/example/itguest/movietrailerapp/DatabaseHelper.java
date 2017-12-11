@@ -17,7 +17,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public final static String COL_5 = "rating";
 
 
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DatabaseHelper(Context context)//, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    {
         super(context, DATABASE_NAME, null, 1);
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
     }

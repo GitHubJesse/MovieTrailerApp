@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieTrailerApp</string>
+    <string name="btnAddTrailer">Add Trailer</string>
 </resources>
