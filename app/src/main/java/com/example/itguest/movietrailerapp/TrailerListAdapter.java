@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -39,16 +38,20 @@ public class TrailerListAdapter extends ArrayAdapter<Trailer>
         ImageView trailerThumbnail = (ImageView) customView.findViewById(R.id.videoThumbnail);
 
         //Grab the current item's title and set it's value to the textview
-        textViewVideoTitle.setText(trailerItem.getTitle());
+        if (trailerItem != null) {
+            textViewVideoTitle.setText(trailerItem.getTitle());
+        }
 
         //Retrieve YouTube Thumbnail via Picasso
-        Picasso.with(getContext())
-                //Load the url path the the thumbnail
-                .load("https://img.youtube.com/vi/"+trailerItem.getVideo_url()+"/0.jpg")
-                //Resize to fit into the list display
-                .resize(250,200)
-                //Set the imageView to set the thumbnail into
-                .into(trailerThumbnail);
+        if (trailerItem != null) {
+            Picasso.with(getContext())
+                    //Load the url path the the thumbnail
+                    .load("https://img.youtube.com/vi/"+trailerItem.getVideo_url()+"/0.jpg")
+                    //Resize to fit into the list display
+                    .resize(280,250)
+                    //Set the imageView to set the thumbnail into
+                    .into(trailerThumbnail);
+        }
 
         return customView;
     }
