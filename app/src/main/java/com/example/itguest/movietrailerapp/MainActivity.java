@@ -3,7 +3,6 @@ package com.example.itguest.movietrailerapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -11,8 +10,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-
-import static com.example.itguest.movietrailerapp.R.id.parent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 //Create new intent to move to the addTrailerForm
-                Intent addNewTrailerForm = new Intent(MainActivity.this, addNewTrailerForm.class);
+                Intent addNewTrailerForm = new Intent(MainActivity.this, NewTrailerForm.class);
                 //Set flag to start a new task fresha dn destroy the old task
                 addNewTrailerForm.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
