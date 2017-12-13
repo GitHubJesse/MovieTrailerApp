@@ -26,30 +26,13 @@ public class MainActivity extends AppCompatActivity {
         trailerDB = new DatabaseHelper(this);
 
         //flushDatabase();
+
         /** SEEDING DATABASE */
         //seedDatabase();
         /** DONE SEEDING */
 
         //Set up a variable to read from the add Trailer button
         btnAddTrailer = (Button) findViewById(R.id.btnAddTrailer);
-
-        //Set onClickListener to intent to a new page and display a form for adding a new trailer
-        btnAddTrailer.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                //Create new intent to move to the addTrailerForm
-                Intent addNewTrailerForm = new Intent(MainActivity.this, NewTrailerForm.class);
-                //Set flag to start a new task fresh and destroy the old task
-                addNewTrailerForm.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                //Start new activity and destroy the old one
-                startActivity(addNewTrailerForm);
-                MainActivity.this.finish();
-            }
-        });
-
 
     //Retrieve all trailer records from the Database
     ArrayList<Trailer> trailers = trailerDB.getTrailers();
@@ -77,7 +60,23 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    //listViewTrailers.setOnItemClickListener()
+    //Set onClickListener to intent to a new page and display a form for adding a new trailer
+    btnAddTrailer.setOnClickListener(new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view)
+        {
+            //Create new intent to move to the addTrailerForm
+            Intent addNewTrailerForm = new Intent(MainActivity.this, NewTrailerForm.class);
+
+            //Set flag to start a new task fresh and destroy the old task
+            addNewTrailerForm.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            //Start new activity and destroy the old one
+            startActivity(addNewTrailerForm);
+            MainActivity.this.finish();
+        }
+    });
 
     }
     public void seedDatabase()
