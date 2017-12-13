@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="318dp"
+        android:layout_height="190dp"
+        android:background="?attr/colorControlHighlight"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="textPersonName"
+        android:text="@string/videoDescription"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="252dp"
+        android:layout_height="52dp"
+        android:background="?attr/colorControlHighlight"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/videoTitle"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="16dp" />
+</android.support.constraint.ConstraintLayout>

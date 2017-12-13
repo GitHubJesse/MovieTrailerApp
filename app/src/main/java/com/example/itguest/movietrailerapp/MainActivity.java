@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 //Create new intent to move to the addTrailerForm
                 Intent addNewTrailerForm = new Intent(MainActivity.this, NewTrailerForm.class);
-                //Set flag to start a new task fresha dn destroy the old task
+                //Set flag to start a new task fresh and destroy the old task
                 addNewTrailerForm.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 //Start new activity and destroy the old one

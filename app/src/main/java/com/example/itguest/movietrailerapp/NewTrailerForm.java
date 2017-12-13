@@ -11,7 +11,7 @@ public class NewTrailerForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         //Need to Create form layout view
-        //setContentView(R.layout.activity_new_trailer);
+        setContentView(R.layout.activity_new_trailer);
 
 
     }

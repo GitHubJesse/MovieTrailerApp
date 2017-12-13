@@ -26,8 +26,10 @@
         android:id="@+id/videoThumbnail"
         android:layout_width="66dp"
         android:layout_height="65dp"
-        app:srcCompat="@android:drawable/gallery_thumb"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/gallery_thumb" />
 
 </android.support.constraint.ConstraintLayout>
